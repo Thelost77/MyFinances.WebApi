@@ -40,6 +40,11 @@ namespace MyFinances.WebApi.Controllers
 
             return response;
         }
+        /// <summary>
+        /// Get operation by id
+        /// </summary>
+        /// <param name="id">Operation id</param>
+        /// <returns>DataResponse - Operation Dto</returns>
         [HttpGet("{id}")]
         public DataResponse<OperationDto> Get(int id)
         {
@@ -104,6 +109,24 @@ namespace MyFinances.WebApi.Controllers
             {
                 _unitOfWork.Operation.Delete(id);
                 _unitOfWork.Complete();
+            }
+            catch (Exception e)
+            {
+                //logowanie do pliku
+                response.Errors.Add(new Error(e.Source, e.Message));
+            }
+
+            return response;
+        }
+        [HttpGet("{numberOfRecords}/{pageNumber}")]
+        [Route("api/operation/{numberOfRecords}/{pageNumber}")]
+        public DataResponse<IEnumerable<OperationDto>> Get(int numberOfRecords, int pageNumber)
+        {
+            var response = new DataResponse<IEnumerable<OperationDto>>();
+
+            try
+            {
+                response.Data = _unitOfWork.Operation.Get(numberOfRecords, pageNumber).ToDtos();
             }
             catch (Exception e)
             {

@@ -18,6 +18,11 @@ namespace MyFinances.WebApi.Models.Repositories
         {
             return _context.Operations.ToList();
         }
+        public IEnumerable<Operation> Get(int numberOfRecords, int pageNumber = 1)
+        {
+            var listOfOperations = _context.Operations.Skip(numberOfRecords * (pageNumber - 1)).ToList();
+            return listOfOperations.Take(numberOfRecords);
+        }
 
         public Operation Get(int id)
         {
