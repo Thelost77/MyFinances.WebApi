@@ -1,5 +1,5 @@
 ﻿using MyFinances.WebApi.Models.Domains;
-using MyFinances.WebApi.Models.Dtos;
+using MyFinances.Core.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;

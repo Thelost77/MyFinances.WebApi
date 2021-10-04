@@ -1,10 +1,9 @@
-﻿using MyFinances.WebApi.Models.Domains;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyFinances.WebApi.Models.Dtos
+namespace MyFinances.Core.Dtos
 {
     public class OperationDto
     {
