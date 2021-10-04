@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MyFinances.Core
+namespace MyFinance.Core
 {
     public class Class1
     {

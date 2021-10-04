@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyFinance.Core\MyFinances.Core.csproj" />
+    <ProjectReference Include="..\MyFinances.Core\MyFinances.Core.csproj" />
   </ItemGroup>
 
 
