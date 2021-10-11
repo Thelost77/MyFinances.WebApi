@@ -119,7 +119,6 @@ namespace MyFinances.WebApi.Controllers
             return response;
         }
         [HttpGet("{numberOfRecords}/{pageNumber}")]
-        [Route("api/operation/{numberOfRecords}/{pageNumber}")]
         public DataResponse<IEnumerable<OperationDto>> Get(int numberOfRecords, int pageNumber)
         {
             var response = new DataResponse<IEnumerable<OperationDto>>();

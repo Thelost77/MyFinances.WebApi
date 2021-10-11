@@ -13,7 +13,6 @@ namespace MyFinances.WebApi.Models.Domains
         public decimal Value { get; set; }
         public DateTime Date { get; set; }
         public int CategoryId { get; set; }
-
         public virtual Category Category { get; set; }
     }
 }
